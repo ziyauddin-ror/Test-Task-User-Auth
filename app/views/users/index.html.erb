@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Welcome to Test task</h1>
+    <% if current_user %>
+      <%= link_to 'Posts', posts_path, class: 'btn btn-secondary mb-3' %>
+      <%= link_to 'Logout', '/logout', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' %>
+    <% else %>
+      <%= link_to 'Signup', '/signup', class: 'btn btn-primary' %>
+      <%= link_to 'Login', '/login', class: 'btn btn-success' %>
+    <% end %>
+</div>
